@@ -1,0 +1,230 @@
+/* Estilos Generales */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    background-color: #121212; /* Color de respaldo si la imagen no carga */
+    background-image: url('images/vortex.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: "Audiowide", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    position: relative;
+    overflow-y: auto; /* Permitir scroll vertical si es necesario */
+}
+
+.title {
+    position: absolute; /* Cambiado de absolute a fixed */
+    top: 8vh; 
+    left: 20%;
+    transform: translateX(-50%);
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    width: 90%;
+    text-align: center;
+    z-index: 5;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.notificacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #121212;
+    border: 3px solid #ba5dff;
+    border-radius: 15px;
+    padding: 15px 25px;
+    margin: 30px auto;
+    width: fit-content;
+    color: white;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(186, 93, 255, 0.3);
+}
+
+.icono-campana {
+    width: 25px;
+    height: 25px;
+    filter: drop-shadow(0 0 3px #ba5dff);
+}
+
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c2c2c;
+    padding: 10px 20px;
+    padding-right: 25px;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 10;
+    height: 60px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.header-left,
+.header-center,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    gap: 10px;
+    flex: 1;
+}
+
+.header-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-right {
+    justify-content: flex-end;
+    gap: 10px;
+    flex: 1;
+    flex-wrap: nowrap;
+    padding-right: 25px;
+}
+
+.search-bar {
+    width: 50vw;
+    max-width: 600px;
+    min-width: 200px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ba5dff;
+    border-radius: 20px;
+    background: #121212;
+    color: white;
+}
+
+/* Logo */
+.logo {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+
+    
+}
+
+
+
+.logo-img {
+    width: 60px;
+    height: auto;
+}
+
+.logo-text {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 23px;
+    font-weight: normal;
+    margin-left: 10px;
+    color: white;
+}
+
+/* Navegación */
+.nav-btn {
+    font-family: 'Audiowide', sans-serif;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Iconos */
+.icons {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+}
+
+.icons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    min-width: 24px;
+}
+
+.icons img {
+    width: 22px;
+    height: 22px;
+}
+
+/* Estilo especial para ícono de perfil */
+.icons button:last-child img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #ba5dff;
+    padding: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .header-left,
+    .header-center,
+    .header-right {
+        flex: 100%;
+        justify-content: center;
+        margin: 5px 0;
+    }
+
+    .search-bar {
+        width: 90%;
+        max-width: none;
+    }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 10px;
+    margin-top: 65px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ba5dff;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9b3fd8;
+}

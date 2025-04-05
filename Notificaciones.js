@@ -1,0 +1,21 @@
+// Esperar a que el DOM cargue
+document.addEventListener("DOMContentLoaded", () => {
+    // ===============================
+    // Redirecciones de botones header
+    // ===============================
+
+    // Shop
+    document.querySelector(".nav-btn").addEventListener("click", () => {
+        window.location.href = "shop.html"; // Cambia por tu ruta real
+    });
+
+    // Carrito
+    document.querySelector('.icons button:nth-child(1)').addEventListener("click", () => {
+        window.location.href = "carrito.html"; // Cambia por tu ruta real
+    });
+
+    // Perfil
+    document.querySelector('.icons button:nth-child(2)').addEventListener("click", () => {
+        window.location.href = "perfil.html"; // Cambia por tu ruta real
+    });
+});
