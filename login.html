@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Iniciar o Registrarse - CromatikArt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <!-- Logo y encabezado -->
+  <header class="logo-container">
+    <a href="PrincipalSinLogin.html" class="logo-link">
+      <img src="images/logo.png" alt="Logo CromatikArt" class="logo">
+      <h1 class="brand">CromatikArt</h1>
+    </a>
+  </header>
+  
+
+  <!-- Contenedor principal para el formulario y botones de social login -->
+  <div class="container">
+    <h2 class="title">Iniciar sesión en CromatikArt</h2>
+
+    <div class="social-login">
+      <!-- Botón Google -->
+      <button class="social-button google">
+        <div class="social-button-inner">
+          <img src="icons/google.png" alt="Google">
+          <span>Iniciar sesión con Google</span>
+        </div>
+      </button>
+    
+      <!-- Botón Facebook -->
+      <button class="social-button facebook">
+        <div class="social-button-inner">
+          <img src="icons/face.png" alt="Facebook">
+          <span>Continuar con Facebook</span>
+        </div>
+      </button>
+    </div>
+
+    <hr class="divider">
+
+    <div class="Option">
+      <span>O</span>
+    </div>
+
+    <!-- Formulario de login -->
+    <form class="form">
+      <label for="email">Añade tu correo electrónico</label>
+      <div class="input-wrapper">
+        <input type="email" id="email" placeholder="email@example.com">
+      </div>
+
+      <label for="password">Elije una contraseña</label>
+      <div class="input-wrapper">
+        <input type="password" id="password" placeholder="password">
+      </div>
+      <p class="hint">Min 5 letras, números y símbolos</p>
+
+      <button type="submit" class="submit-btn">Continuar</button>
+
+            <!-- Nuevos elementos -->
+      <div class="form-footer">
+        <a href="recuperar-password.html" class="forgot-password">¿Olvidaste tu contraseña?</a>
+        <div class="register-container">
+          <span class="no-account">¿No tienes una cuenta?</span>
+          <a href="registro.html" class="register-link">Regístrate aquí</a>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
