@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CromatikArt</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="PrincipalSinLogin.css" />
+    <script defer src="PrincipalSinLogin.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <img src="images/logo.png" alt="CromatikArt Logo" class="logo-img" />
+                <span class="logo-text">CromatikArt</span>
+            </div>
+        </div>
+
+        <div class="header-center">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar..." id="searchInput" aria-label="Buscar en la galería" />
+            </div>
+        </div>
+
+        <div class="header-right">
+            <div class="icons">
+                <button aria-label="Notificaciones">
+                    <img src="icons/bell.png" alt="Notificaciones" />
+                </button>
+                <button aria-label="Carrito de compras">
+                    <img src="icons/cart.png" alt="Carrito" />
+                </button>
+            </div>
+            <button class="btn login-btn" aria-label="Iniciar sesión">Iniciar sesión</button>
+            <button class="btn register-btn" aria-label="Registrarse">Registrarse</button>
+        </div>
+    </header>
+
+    <section class="carousel" aria-label="Carrusel de arte destacado">
+        <div class="carousel-container" id="carouselContainer"></div>
+        <button class="carousel-btn prev" onclick="prevSlide()" aria-label="Imagen anterior">❮</button>
+        <button class="carousel-btn next" onclick="nextSlide()" aria-label="Imagen siguiente">❯</button>
+    </section>
+
+    <section class="imagenes" id="imagenes" aria-label="Galería de arte"></section>
+
+    <div class="more-btn" id="loadMoreBtn" role="button" tabindex="0" aria-label="Cargar más arte">
+        <span>Más</span>
+        <img src="icons/arrow-right.svg" alt="Ver más" />
+    </div>
+</body>
+</html>
