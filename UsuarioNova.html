@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaStrider - CromatikArt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="UsuarioNova.CSS">
+</head>
+<body>
+  <div class="page-container">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-left">
+          <div class="logo">
+            <img src="imagenes/logo.png" alt="CromatikArt Logo" class="logo-img" />
+            <span class="logo-text">CromatikArt</span>
+          </div>
+          <button class="nav-btn" aria-label="Ir a la tienda">Shop</button>
+        </div>
+
+        <div class="header-center">
+          <div class="search-bar">
+            <input type="text" placeholder="Buscar..." id="searchInput" aria-label="Buscar en la galería" />
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div class="icons">
+            <button aria-label="Notificaciones">
+              <img src="icons/bell.png" alt="Notificaciones" />
+            </button>
+            <button aria-label="Carrito de compras">
+              <img src="icons/cart.png" alt="Carrito" />
+            </button>
+            <button aria-label="Perfil">
+              <img src="icons/user.png" alt="Perfil de usuario" />
+            </button>
+          </div>
+        </div>
+      </header>
+
+    <!-- PERFIL DE USUARIO -->
+    <div class="profile-container">
+      <!-- Banner del perfil -->
+      <div class="profile-banner">
+        <img src="imagenes/Cyberpunk Skyline.png" alt="Banner de perfil" class="banner-img">
+      </div>
+
+      <!-- Información del perfil -->
+      <div class="profile-info">
+        <div class="profile-left">
+          <div class="profile-avatar-container">
+            <img src="imagenes/CP2077_Samurai_Logo.webp" alt="Avatar de NovaStrider" class="profile-avatar">
+          </div>
+          <div class="profile-details">
+            <h1 class="profile-name">NovaStrider</h1>
+            <p class="profile-stats">20 artes subidos</p>
+          </div>
+        </div>
+        <div class="profile-actions">
+          <button id="followButton" class="btn-follow">SEGUIR</button>
+        </div>
+      </div>
+
+      <!-- Portafolio del usuario -->
+      <div class="user-portfolio">
+        <div class="portfolio-header">
+          <div>
+            <h2 class="portfolio-title">PORTAFOLIO</h2>
+            <div class="portfolio-underline"></div>
+          </div>
+        </div>
+        
+        <div class="portfolio-grid">
+          <!-- Obra 1 - Bleeding Streets -->
+          <div class="portfolio-item">
+            <a href="Descripción.html?id=1">
+              <img src="imagenes/Samurai Cyberpunk.png" alt="Bleeding Streets" class="portfolio-image">
+        </a>
+          </div>
+          
+          <!-- Obra 2 - Blue Wolf -->
+          <div class="portfolio-item">
+            <a href="Descripción.html?id=2">
+              <img src="imagenes/Blue Wolf.webp" alt="Blue Wolf" class="portfolio-image">
+        </a>
+          </div>
+          
+          <!-- Obra 3 - Elegant Future -->
+          <div class="portfolio-item">
+            <a href="Descripción.html?id=3">
+              <img src="imagenes/Elegant Future.png" alt="Elegant Future" class="portfolio-image">
+        </a>
+          </div>
+          
+          <!-- Obra 4 - Magistral Lion -->
+          <div class="portfolio-item">
+            <a href="Descripción.html?id=4">
+              <img src="imagenes/Magistral Lion.jpeg" alt="Magistral Lion" class="portfolio-image">
+        </a>
+          </div>
+          
+          <!-- Obra 5 - Magic Galaxy -->
+          <div class="portfolio-item">
+            <a href="Descripción.html?id=5">
+              <img src="imagenes/Magic Galaxy.png" alt="Magic Galaxy" class="portfolio-image">
+        </a>
+          </div>
+          <!-- Obra 6 - Cyber Ronin -->
+        <div class="portfolio-item">
+          <a href="Descripción.html?id=6">
+            <img src="imagenes/Dark Showroom.png" alt="Dark Showroom" class="portfolio-image">
+</a>
+  </div>
+  
+  <!-- Obra 7 - Digital Dreams -->
+  <div class="portfolio-item">
+    <a href="Descripción.html?id=7">
+      <img src="imagenes/Cathedral of Echoes.png" alt="Cathedral of Echoes" class="portfolio-image">
+</a>
+  </div>
+  
+  <!-- Obra 8 - Neon Prophet -->
+  <div class="portfolio-item">
+    <a href="Descripción.html?id=8">
+      <img src="imagenes/16 Bit Landscape.jpeg" alt="16 bit landscape" class="portfolio-image">
+</a>
+  </div>
+
+ 
+        </div>
+      </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p class="footer-brand">CromatikArt</p>
+    </footer>
+  </div>
+  
+  <script>
+    // Para añadir comportamiento de hover a las imágenes del portafolio
+    document.addEventListener('DOMContentLoaded', () => {
+      const portfolioItems = document.querySelectorAll('.portfolio-item');
+      
+      portfolioItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+          const image = item.querySelector('.portfolio-image');
+          image.style.transform = 'scale(1.05)';
+          image.style.filter = 'brightness(1.2)';
+          image.style.boxShadow = '0 0 20px rgba(186, 93, 255, 0.5)';
+        });
+        
+        item.addEventListener('mouseleave', () => {
+          const image = item.querySelector('.portfolio-image');
+          image.style.transform = '';
+          image.style.filter = '';
+          image.style.boxShadow = '';
+        });
+      });
+      
+      // Funcionalidad para el botón de seguir/siguiendo
+      const followButton = document.getElementById('followButton');
+      
+      followButton.addEventListener('click', function() {
+        if (followButton.classList.contains('btn-follow')) {
+          // Cambiar a "SIGUIENDO" (estado seguido)
+          followButton.textContent = 'SIGUIENDO';
+          followButton.classList.remove('btn-follow');
+          followButton.classList.add('btn-following');
+        } else {
+          // Cambiar a "SEGUIR" (estado no seguido)
+          followButton.textContent = 'SEGUIR';
+          followButton.classList.remove('btn-following');
+          followButton.classList.add('btn-follow');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
