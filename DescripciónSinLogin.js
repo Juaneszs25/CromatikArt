@@ -132,7 +132,7 @@ document.querySelector(".register-btn").addEventListener("click", () => {
 });
 
 document.querySelector('.icons button:nth-child(2)').addEventListener("click", () => {
-  window.location.href = "carrito.html";
+  window.location.href = "login.html";
 });
 
 document.querySelector('.icons button:nth-child(1)').addEventListener("click", () => {
