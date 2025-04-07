@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito - CromatikArt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+
+    <!-- Encabezado fijo -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="CromatikArt Logo" class="logo-img-small">
+            <span class="logo-text">CromatikArt</span>
+        </div>
+    
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Buscar...">
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="carrito-contenido">
+        <section class="metodo-pago">
+            <h2>MÉTODO DE PAGO</h2>
+            <label for="metodo">Selecciona un método de pago</label>
+            <select id="metodo">
+                <option value="paypal">PAYPAL</option>
+                <option value="visa">VISA</option>
+                <option value="mastercard">MASTERCARD</option>
+                <option value="nequi">NEQUI</option>
+            </select>
+            <p>Revisa tu pedido antes de proceder</p>
+        </section>
+
+        <section class="pedido">
+            <h2>Pedido</h2>
+            <div class="tabla-pedido">
+                <div class="fila"><span>Cosmic Explosion</span><span>$ 200.000</span></div>
+                <div class="fila total"><span>TOTAL</span><span>$ 200.000</span></div>
+            </div>
+            <button class="btn-comprar" onclick="mostrarMensaje()">Comprar</button>
+        </section>
+
+        <section class="lista-articulos">
+            <h2>Lista de artículos</h2>
+            <div class="articulo">
+                <img src="images/cosmic-explosion.jpg" alt="Cosmic Explosion">
+                <div class="info">
+                    <p class="titulo">Cosmic Explosion</p>
+                    <p class="autor">Por NovaStrider</p>
+                </div>
+                <span class="precio">$ 200.000</span>
+                <button class="eliminar">✖</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function mostrarMensaje() {
+            alert("¡Compra exitosa!");
+        }
+    </script>
+
+</body>
+</html>

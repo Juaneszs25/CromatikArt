@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    font-family: 'Audiowide', sans-serif;
+    background: url('images/fondo-galaxia.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    padding-top: 80px;
+}
+
+.carrito-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.metodo-pago, .pedido, .lista-articulos {
+    background: #1a1a1a;
+    border: 2px solid #ba5dff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(186, 93, 255, 0.4);
+}
+
+.metodo-pago h2, .pedido h2, .lista-articulos h2 {
+    background: #ba5dff;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+select {
+    background: #121212;
+    border: 2px solid #ba5dff;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.tabla-pedido {
+    background: #121212;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.tabla-pedido .fila {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #333;
+}
+
+.tabla-pedido .total {
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    margin-top: 10px;
+}
+
+.btn-comprar {
+    background: #ba5dff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.lista-articulos .articulo {
+    display: flex;
+    align-items: center;
+    background: #121212;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.articulo img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 10px;
+}
+
+.articulo .info {
+    flex-grow: 1;
+}
+
+.articulo .titulo {
+    font-weight: bold;
+}
+
+.articulo .autor {
+    font-size: 14px;
+    color: #bbb;
+}
+
+.articulo .precio {
+    margin-right: 15px;
+}
+
+.articulo .eliminar {
+    background: transparent;
+    border: none;
+    color: #ba5dff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* -------- CORRECCIONES NUEVAS -------- */
+
+/* LOGO */
+.logo-img {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 20px auto 10px auto;
+}
+
+/* BARRA DE BÚSQUEDA */
+.search-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.search-container input[type="text"] {
+    background-color: #1a1a1a;
+    border: 2px solid #ba5dff;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 14px;
+    width: 220px;
+}
+
+.search-container label {
+    color: white;
+    font-family: 'Audiowide', sans-serif;
+    display: block;
+    margin-bottom: 5px;
+}
+/* HEADER FLEX PARA ORGANIZAR LOGO + BÚSQUEDA */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    z-index: 1000;
+}
+
+/* Logo y texto juntos alineados a la izquierda */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Logo más pequeño */
+.logo-img-small {
+    width: 30px;
+    height: auto;
+}
+
+/* Texto al lado del logo */
+.logo-text {
+    color: white;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 20px;
+}
+
+/* Centrar la barra de búsqueda */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.search-container label {
+    color: white;
+    margin-bottom: 4px;
+}
+
+.search-container input[type="text"] {
+    background-color: #1a1a1a;
+    border: 2px solid #ba5dff;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 14px;
+    width: 220px;
+}
