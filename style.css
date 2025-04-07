@@ -1,0 +1,41 @@
+.formulario-arte {
+    background-color: #1c1c1c;
+    border: 2px solid #ba5dff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    color: white;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.formulario-arte h3 {
+    color: #ba5dff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.formulario-arte form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formulario-arte input,
+.formulario-arte textarea {
+    background-color: #121212;
+    border: 1px solid #ba5dff;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-family: inherit;
+}
+body {
+    background-color: #121212; /* fondo oscuro como en Figma */
+    font-family: 'Poppins', sans-serif; /* fuente más limpia */
+    color: white; /* texto blanco */
+    margin: 0; /* quitar espacio extra */
+    padding-top: 70px; /* para que el contenido no se esconda bajo el header fijo */
+  }
+  
